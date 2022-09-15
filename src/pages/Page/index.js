@@ -1,9 +1,15 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
 import { Stack, List, Column, Img, Button, Text, Row, Line } from "components";
 
 const Page = () => {
+  const navigate = useNavigate();
+
   function handleNavigate1() {
+    navigate("/page1");
+  }
+  function handleNavigate2() {
     window.location.href = "https://accounts.google.com/";
   }
 
@@ -170,7 +176,8 @@ const Page = () => {
               alt="arrowdown"
             />
             <Button
-              className="font-medium lg:mt-[36px] xl:mt-[41px] 2xl:mt-[46px] 3xl:mt-[55px] lg:text-[16px] xl:text-[18px] 2xl:text-[21px] 3xl:text-[25px] text-center w-[100%]"
+              className="common-pointer font-medium lg:mt-[36px] xl:mt-[41px] 2xl:mt-[46px] 3xl:mt-[55px] lg:text-[16px] xl:text-[18px] 2xl:text-[21px] 3xl:text-[25px] text-center w-[100%]"
+              onClick={handleNavigate1}
               shape="CircleBorder24"
             >
               이메일로 계속
@@ -190,7 +197,7 @@ const Page = () => {
             <Row className="items-center xl:mb-[10px] 2xl:mb-[11px] 3xl:mb-[13px] lg:mb-[8px] lg:mt-[19px] xl:mt-[22px] 2xl:mt-[25px] 3xl:mt-[30px] p-[4px] w-[16%]">
               <Button
                 className="common-pointer flex lg:h-[44px] xl:h-[51px] 2xl:h-[57px] 3xl:h-[68px] items-center justify-center rounded-radius50 lg:w-[43px] xl:w-[50px] 2xl:w-[56px] 3xl:w-[67px]"
-                onClick={handleNavigate1}
+                onClick={handleNavigate2}
                 size="smIcn"
                 variant="icbFillRed600"
               >
