@@ -1,8 +1,15 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
 import { Stack, List, Column, Img, Text, Button, Row } from "components";
 
 const Page1 = () => {
+  const navigate = useNavigate();
+
+  function handleBackNavigation1() {
+    navigate(-1);
+  }
+
   return (
     <>
       <Stack className="bg-white_A700 font-pretendardvariable xl:h-[1024px] 2xl:h-[1152px] 3xl:h-[1382px] lg:h-[895px] mx-[auto] w-[100%]">
@@ -164,7 +171,8 @@ const Page1 = () => {
               <Column className="items-center ml-[2px] rounded-radius825 w-[2%]">
                 <Img
                   src="images/img_arrowleft.svg"
-                  className="lg:h-[18px] xl:h-[21px] 2xl:h-[23px] 3xl:h-[28px] rounded-radius50 w-[100%]"
+                  className="common-pointer lg:h-[18px] xl:h-[21px] 2xl:h-[23px] 3xl:h-[28px] rounded-radius50 w-[100%]"
+                  onClick={handleBackNavigation1}
                   alt="arrowleft"
                 />
               </Column>
